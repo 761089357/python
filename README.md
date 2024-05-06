@@ -1,1 +1,1 @@
-# python-自动化测试
+# python-/etc/init.d/ssr 脚本
