@@ -39,7 +39,17 @@ do_start(){
 	else
 		cd ${FOLDER}
 		#python_ver=$(ls /usr/bin|grep -e "^python[23]\.[1-9]\+$"|tail -1)
-		python_ver="python3.9"
+		# 使用正则表达式来检测版本号  
+
+		if [[ $python_ver =~ ^3\.[1-9](?:\.0)?$ ]]; then  
+
+			echo "Python版本在3.1到3.10之间"  
+
+		else  
+
+			echo "Python版本不在3.1到3.10之间"  
+
+		fi
 		ulimit -n 512000
 		nohup "${python_ver}" "$BIN" -c "$CONF" a >> ssserver.log 2>&1 &
 		sleep 2s
