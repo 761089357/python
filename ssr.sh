@@ -14,7 +14,7 @@ export PATH
 
 #=================================================
 
-sh_ver="2.0.38"
+sh_ver="2.0.39"
 filepath=$(cd "$(dirname "$0")"; pwd)
 file=$(echo -e "${filepath}"|awk -F "$0" '{print $1}')
 ssr_folder="/usr/local/shadowsocksr"
