@@ -40,7 +40,7 @@ do_start(){
 		cd ${FOLDER}
 		#python_ver=$(ls /usr/bin|grep -e "^python[23]\.[1-9]\+$"|tail -1)
 		# 使用正则表达式来检测版本号  
-
+		python_ver=$(ls /usr/bin|grep -e "^python[23]\.[1-9]\+$"|tail -1)
 		if [[ $python_ver =~ ^3\.[1-9](?:\.0)?$ ]]; then  
 
 			echo "Python版本在3.1到3.10之间"  
